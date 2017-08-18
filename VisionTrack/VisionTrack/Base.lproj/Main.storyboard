@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bmo-Y9-506">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--点击屏幕跟踪-->
+        <scene sceneID="Rx2-yK-ViU">
+            <objects>
+                <viewController id="j3t-h8-dkw" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B8d-tP-Gc7"/>
+                        <viewControllerLayoutGuide type="bottom" id="QYs-C6-0h8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a2Y-yy-nCu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPu-6I-Z9a">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.64705882349999999" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y20-0c-vwP">
+                                <rect key="frame" x="52" y="289" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="u9m-3i-FnI" appends="YES" id="gOT-Ly-pz1"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="点击屏幕跟踪" id="wTk-cx-hzF">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="nhC-2X-WRD">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fce-XF-kJE">
+                                <rect key="frame" x="328" y="7" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="重置"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="j3t-h8-dkw" eventType="touchUpInside" id="n6k-hc-bAl"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraView" destination="mPu-6I-Z9a" id="oq2-94-zJs"/>
+                        <outlet property="highlightView" destination="Y20-0c-vwP" id="lEk-zP-Ld8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHy-KW-CvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="u9m-3i-FnI">
+                    <connections>
+                        <action selector="userTapped:" destination="j3t-h8-dkw" id="mc3-Nr-gqw"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1453.5999999999999" y="66.11694152923539"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bNc-YS-46u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bmo-Y9-506" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ufi-WI-cT7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="j3t-h8-dkw" kind="relationship" relationship="rootViewController" id="dYB-rv-hRS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNf-2t-Riw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="66"/>
+        </scene>
+    </scenes>
+</document>
